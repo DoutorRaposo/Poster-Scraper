@@ -72,11 +72,8 @@ def posters():
         flash("Something went wrong with your request: KeyError (parameter error). Redirecting to main page:")
         return redirect(url_for("index"))
     filtered_filmography = filter_filmography(filmography, roles_list)
-    print(roles_list)
-    print(filtered_filmography.keys())
     for role in roles_list:
         if role.lower() not in list(filtered_filmography):
-            print(role)
             flash("Something went wrong with your request: KeyError (parameter error: role inputed not originally listed). Redirecting to main page:")
             return redirect(url_for("index"))
     return render_template("posters.html", filmography=filtered_filmography, details=details)
