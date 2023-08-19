@@ -50,7 +50,7 @@ def filter_filmography(filmography, roles_list):
     for role in filmography:
         if role.lower() in roles_list:
             filtered_filmography[role.lower()] = filmography[role]
-
+    # This part is for adding a poster_path in case there is none.
     for key in filtered_filmography:
         for index, dkey in enumerate(filtered_filmography[key]):
             if dkey["poster_path"] == None:
