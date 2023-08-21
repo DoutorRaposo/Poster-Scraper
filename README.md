@@ -7,7 +7,22 @@ You can search for an artist and if there is more than one result you can checko
 
 In every page you can checkout the artist's profiles and mentioned titles, if you want, inside Poster Scraper itself or in the website supplier of the database: TMDB.
 
-You can query directly in the URL also, but I made a few countermeasures in case of a wrong parameter of invalid value. I wish my frontend was more refined and my backend more robust, but they work well enough for user experience and in my next project I will study from everything I learned here to prepare beforehand and avoid rubberbanding, in frontend in particular.
+### Features:
+- You can search and find all posters for a given artist and their jobs in a movie
+- You can find a small biography plus a filmography list for every artist in the database
+- You can find each movie individually and see everyone that's credited as cast or crew.
+- You can query directly in the URL if you know the parameters. Everything is through "GET"
 
-### ABOUT MYSELF: 
-My name is Rafael de Andrade. I'm from Curitiba, Brazil. I started this project because I wanted to do a little web scraping by getting all the posters for a certain actor (to create a mosaic), then I thought I could expand to a web application. I started by using custom libraries for web scraping, but decided to learn more about APIs to get a faster and more user friendly experience. This project helped me try out a lot of learned concepts from the classes. I found that TMDB have a free API for their database and I learned a lot using their documentation.
+
+#### Personal thoughts:
+
+- Positives: I made a few countermeasures in case of a wrong parameter of invalid value and the overall experience has been tested to avoid bugginess and is relatively responsive. Also, there is a great number of information you can get using only Poster Scraper.
+
+- Negatives: I wish my frontend was more refined and my backend more robust, but they work well enough for user experience and in my next project I will study from everything I learned here to prepare beforehand and avoid rubberbanding, in frontend in particular.
+
+### ABOUT MYSELF AND THE PROCESS: 
+My name is Rafael de Andrade. I'm from Curitiba, Brazil. 
+
+I started this project because I wanted to do a little web scraping by getting all the posters for a certain actor (to create a mosaic), then I thought I could expand to a web application.
+
+This project helped me try out a lot of learned concepts from the classes. I found that TMDB have a free API for their database and I learned a lot using their documentation. I have a prototype only in Python using a library called Cinemagoer for IMDB and using Beautiful Soup for web scraping, then I evolved into a web app using the same tools. I found it very slow, but then I found out about TMDB's free API and recreated the whole thing to be faster and more user friendly. When it was functional, I did the frontend.
