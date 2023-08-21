@@ -31,11 +31,11 @@ movie page for {{ details['title'] }}
                             <h5 style="font-weight: bold;">Overview:</h5>
                             <p>{{ details['overview'] }}</p>
                             </p>
-                            {% if details['release_date'] != None %}<p>Release date: {{ details['release_date'] }}</p>{%
+                            {% if details['release_date'] != "" %}<p>Release date: {{ details['release_date'] }}</p>{%
                             endif %}
-                            {% if details['tagline'] != None %}<p>Tagline: {{
+                            {% if details['tagline'] != "" %}<p>Tagline: {{
                                 details['tagline'] }}</p>{% endif %}
-                            <p>{% for genre in details['genres'] %}
+                            <p>Genre(s): {% for genre in details['genres'] %}
                                 {{ genre['name'] }}
                                 {% endfor%}
                             </p>
