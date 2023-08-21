@@ -44,10 +44,10 @@ movie page for {{ details['title'] }}
             </div>
             <div class="row">
                 {% for type in details['credits'] %}
-                {% for person in type %}
+                {% for person in details['credits'][type] %}
                 <div class="box">
                     <div class="col-md-auto" id="bio" style="margin: 3%;">
-                        <h2 style="font-weight: bold; padding-bottom: 5px">Credited as {{person['character'] | title}}:
+                        <h2 style="font-weight: bold; padding-bottom: 5px">Credited as {{ person['character'] | title}}:
                             {{ person['name'] }} </h2>
                         <h4 style="font-weight: bold;"><a href=""></a>
                         </h4>
