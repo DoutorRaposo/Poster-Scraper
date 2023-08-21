@@ -31,24 +31,31 @@ movie page for {{ details['title'] }}
                             <h5 style="font-weight: bold;">Overview:</h5>
                             <p>{{ details['overview'] }}</p>
                             </p>
-                            {% if details['release_date'] != None %}<p>Release date: {{ details['release_date'] }}</p>{% endif %}
+                            {% if details['release_date'] != None %}<p>Release date: {{ details['release_date'] }}</p>{%
+                            endif %}
                             {% if details['tagline'] != None %}<p>Tagline: {{
                                 details['tagline'] }}</p>{% endif %}
+                            <p>{% for genre in details['genres'] %}
+                                {{ genre['name'] }}
+                                {% endfor%}
+                            </p>
                         </div>
                     </div>
 
                 </div>
             </div>
             <div class="row">
-                {% for keys in filmography %}
+                {% for credits in details['credits'] %}
                 <div class="box">
-                    <div class="col-md-auto" id="bio" style="margin: 3%;">                        
-                        <h2 style="font-weight: bold; padding-bottom: 5px">{{keys | title}} </h2>                        
-                        {% for movie in filmography[keys] %} 
-                        <h4 style="font-weight: bold;"><a href="/movie?m={{ movie['id'] }}">{{ movie['title'] }}</a> </h4>
+                    <div class="col-md-auto" id="bio" style="margin: 3%;">
+                        <h2 style="font-weight: bold; padding-bottom: 5px">{{keys | title}} </h2>
+                        {% for movie in filmography[keys] %}
+                        <h4 style="font-weight: bold;"><a href="/movie?m={{ movie['id'] }}">{{ movie['title'] }}</a>
+                        </h4>
                         <p> {{ movie['overview'] }} </p>
-                        <p> Release date:  {{ movie['release_date'] }} </p>
-                        <div class="col" id="bio" style="margin: 3%;"><img id="mini" src="{{ movie['poster_path'] }}" alt="{{ movie['overview'] }}" class="responsive">
+                        <p> Release date: {{ movie['release_date'] }} </p>
+                        <div class="col" id="bio" style="margin: 3%;"><img id="mini" src="{{ movie['poster_path'] }}"
+                                alt="{{ movie['overview'] }}" class="responsive">
                         </div>
                         {% endfor %}
                     </div>
