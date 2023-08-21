@@ -118,10 +118,7 @@
 
 #results_box {
     text-align: center;
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 30px;
+    padding: 10%;
 }
 
 .navbar {
@@ -410,5 +407,5 @@ a:visited {
     background: rgba(0, 0, 0, 0.60);
     border-radius: 8px;
     padding: 10px;
-    margin: 5%;
+    margin: 10px;
 }

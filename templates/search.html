@@ -30,7 +30,7 @@ results for {{ artist }}
                         <h4>Known for <strong>{{ result['known_for_department'] | lower }}</strong></h4>
                     </a>
                     <h6>
-                        Titles:
+                        Related titles:
 
                         {% for movie in result['known_for'] %}
                         {% if loop.last %}
