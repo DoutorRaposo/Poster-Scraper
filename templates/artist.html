@@ -20,8 +20,7 @@ artist page for {{ details['name'] }}
                     <div class="col-md-4" id="bio">
                         <div class="box">
                             <h2>
-                                <a href="/options?id={{ details['id'] }}"
-                                    style="font-weight: bold">
+                                <a href="/options?id={{ details['id'] }}" style="font-weight: bold">
                                     {{ details['name'] }}</a>
                             </h2>
                             <h6> Click on the name see the poster options or <a
@@ -29,16 +28,15 @@ artist page for {{ details['name'] }}
                                     style="font-weight: bold" target="_blank">
                                     here</a> for the TMDB page.</h6>
                             <p style="font-size: smaller;">
-                                <h5 style="font-weight: bold;">Biography:</h5>
-                                <p>{{ details['biography'] }}</p>
-
-                                <p>Birthday: {{ details['birthday']}}</p>
-                                <p>Known for: {{ details['known_for_department'] }}</p>
-                                <p>Place of Birth: {{ details['place_of_birth'] }}</p>
-
-
+                            <h5 style="font-weight: bold;">Biography:</h5>
+                            <p>{{ details['biography'] }}</p>
                             </p>
                         </div>
+                    </div>
+                    <div class="col-md-4" id="bio">
+                        <p>Birthday: {{ details['birthday']}}</p>
+                        <p>Known for: {{ details['known_for_department'] }}</p>
+                        <p>Place of Birth: {{ details['place_of_birth'] }}</p>
                     </div>
                 </div>
             </div>
