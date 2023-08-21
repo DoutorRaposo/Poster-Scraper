@@ -23,7 +23,7 @@ posters for {{ details['name'] }}
                 <h5><a href="https://www.themoviedb.org/movie/{{ movie['id'] }}" style="font-weight: bold;" target="_blank">{{ movie['title'] }}</a></h5>
                 <p>{{ movie['overview'] }}</p>
                 <p style="font-weight: bold; font-size: smaller;"> Release date: {{movie['release_date'] }}. <br> <a
-                        href="https://www.themoviedb.org/person/{{ details['id'] | string }}" target="_blank">{{ details['name'] }}
+                        href="/artist?p={{ details['id'] }}">{{ details['name'] }}
                     </a> is credited in this title as "{{ keys | lower }}"{% if keys == 'cast' %}
                     {% if details['gender'] == 2 %} (actor, as self or presented) {% elif details['gender'] == 1 %} (actress, as self or presented) {% else %} {%
                     endif %}{% endif %}. </p>
