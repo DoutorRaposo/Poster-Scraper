@@ -22,7 +22,7 @@ posters for {{ details['name'] }}
             <div class="carousel-caption">
                 <h5 style="text-align: center;"><a href="/movie?m={{ movie['id'] }}" style="font-weight: bold;">{{ movie['title'] }}</a></h5>
                 <p>{{ movie['overview'] }}</p>
-                <p style="font-weight: bold; font-size: smaller;"> Release date: {{movie['release_date'] }}. <br> <a
+                <p style="font-weight: bold; font-size: smaller; text-align: center"> Release date: {{movie['release_date'] }}. <br> <a
                         href="/artist?p={{ details['id'] }}">{{ details['name'] }}
                     </a> is credited in this title as "{{ keys | lower }}"{% if keys == 'cast' %}
                     {% if details['gender'] == 2 %} (actor, as self or presented) {% elif details['gender'] == 1 %} (actress, as self or presented) {% else %} {%
