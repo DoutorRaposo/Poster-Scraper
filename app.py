@@ -53,7 +53,6 @@ def options():
         )
         return redirect(url_for("index"))
     roles = list(filmography.keys())
-    roles.sort()
     return render_template(
         "options.html", roles=roles, filmography=filmography, details=details
     )
