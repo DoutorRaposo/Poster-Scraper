@@ -117,7 +117,7 @@ def artist():
         return redirect(url_for("index"))
     roles = list(filmography.keys())
     roles.sort()
-    print(details)
+    filtered_filmography = filter_filmography(filmography, roles)
     return render_template(
-        "artist.html", roles=roles, filmography=filmography, details=details
+        "artist.html", roles=roles, filmography=filtered_filmography, details=details
     )
