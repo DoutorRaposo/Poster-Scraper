@@ -17,38 +17,6 @@ artist page for {{ details['name'] }}
                     <img id="search_img"
                         src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/{{ details['profile_path'] }}">
                     {% endif %}
-                </div>
-                <div class="col" id="details">
-                    <div class="box">
-
-                        <form action="/posters" method="get" name="selected_roles">
-                            <label for="roles">Choose roles to get the posters:</label>
-                            <p></p>
-                            <label for="any" class="container_check">Toggle All
-                                <input type="checkbox" id="any" name="any" onClick="toggle(this)">
-                                <span class="checkmark"></span>
-                            </label>
-                            {% for role in roles %}
-
-                            <label for="{{ role }}" class="container_check">{{ role | title }} {% if role == 'cast' %}
-                                {% if
-                                details['gender'] == 2 %} (acted, as self or presented) {% elif details['gender'] == 1
-                                %} (actress, as self or presented) {% else %}
-                                {% endif %}{% endif %}
-                                <input type="checkbox" id="{{ role }}" name="o" value="{{ role | lower }}">
-                                <span class="checkmark"></span>
-                            </label>
-                            {% endfor %}
-
-
-                            <div id="button_div">
-                                <input type="checkbox" value="{{ details['id'] }}" style="display:none"
-                                    checked="checked" name="id" />
-                                <button class="btn btn-primary" type="submit">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
                 <div class="col-md-4" id="bio">
                     <div class="box">
                         <h2>
