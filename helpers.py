@@ -41,8 +41,8 @@ def get_filmography(filmography_json):
                 continue
     filmography["cast"] = filmography_json["cast"]
     list_roles = list(filmography.keys())
-    list_roles.sort()
-    print(list_roles.sort())
+    list2 = list_roles.sort()
+    print(list2)
     ordered_filmography = {k : filmography[k] for k in list_roles}
     print(ordered_filmography.keys())
     return filmography
