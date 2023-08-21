@@ -34,7 +34,7 @@ results for {{ artist }}
 
                         {% for movie in result['known_for'] %}
                         {% if loop.last %}
-                        <br class="links"><a href="/artist?p={{ result['id'] }}">{{ movie['title']
+                        <br class="links"><a href="/movie?m={{ movie['id'] }}">{{ movie['title']
                             }}.</a>
                         {% else %}
                         <br><a href="/movie?m={{ movie['id'] }}">{{ movie['title'] }}</a>,
