@@ -109,5 +109,15 @@ def artist():
             "Something went wrong with your request: TypeError (ID error). Redirecting to main page:"
         )
         return redirect(url_for("index"))
-    print(details)
-    return redirect(url_for("index"))
+    try:
+        filmography = get_filmography(details["movie_credits"])
+    except KeyError:
+        flash(
+            "Something went wrong with your request: KeyError (parameter error). Redirecting to main page:"
+        )
+        return redirect(url_for("index"))
+    roles = list(filmography.keys())
+    roles.sort()
+    return render_template(
+        "artist.html", roles=roles, filmography=filmography, details=details
+    )
