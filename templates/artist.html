@@ -49,8 +49,9 @@ artist page for {{ details['name'] }}
                         {% if keys == "cast" %}{{keys | title}}{% else %} {{keys}}{% endif %}
                         
                         {% for movie in filmography[keys] %} 
-                        
-                        <p>{{ movie['overview'] }} </p>
+                        <h5>{{ movie['title'] }} </h5>
+                        <p> {{ movie['overview'] }} </p>
+                        <p> {{ movie['release_date'] }} </p>
                         
                         
                         {% endfor %}
