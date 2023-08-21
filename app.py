@@ -83,3 +83,9 @@ def posters():
 def page_not_found(error):
     flash("Page not found: 404. Redirecting to main page:")
     return redirect(url_for("index"))
+
+@app.route("/artist")
+def artist():
+    id = request.args.get("p")
+    print(id)
+    return redirect(url_for("index"))
