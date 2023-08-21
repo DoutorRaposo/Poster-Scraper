@@ -133,5 +133,4 @@ def artist():
 def movie():
     id = request.args.get("m")
     movie_details = get_movie_details(id)
-    print(movie_details)
-    return redirect(url_for("index"))
+    return render_template("movie.html", details=movie_details)
