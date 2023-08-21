@@ -68,7 +68,7 @@ def filter_filmography(filmography, roles_list):
                 )
     return filtered_filmography
 
-
+# This function gets movie details and movie credits just so we can have pages for them also. 
 def get_movie_details(id):
     details_movie_url = (
         "https://api.themoviedb.org/3/movie/" + id + "?append_to_response=credits"
