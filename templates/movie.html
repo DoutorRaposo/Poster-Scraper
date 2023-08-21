@@ -32,11 +32,8 @@ movie page for {{ details['title'] }}
                             <p>{{ details['overview'] }}</p>
                             </p>
                             {% if details['release_date'] != None %}<p>Release date: {{ details['release_date'] }}</p>{% endif %}
-                            {% if details['known_for_department'] != None %}<p>Known for: {{
-                                details['known_for_department'] }}</p>{% endif %}
-                            {% if details['place_of_birth'] != None %} <p>Place of Birth: {{ details['place_of_birth']
-                                }}</p>{% endif %}
-                            {% if details['deathday'] != None %} <p>Deathday: {{ details['deathday'] }}</p> {% endif %}
+                            {% if details['tagline'] != None %}<p>Tagline: {{
+                                details['tagline'] }}</p>{% endif %}
                         </div>
                     </div>
 
