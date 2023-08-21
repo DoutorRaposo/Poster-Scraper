@@ -45,15 +45,14 @@ artist page for {{ details['name'] }}
             <div class="row">
                 {% for keys in filmography %}
                 <div class="box">
-                    <div class="col-md-auto" id="bio" style="margin: 3%;">
-                        {% if keys == "cast" %}{{keys | title}} {% else %} {{keys}}{% endif %}
-                        
+                    <div class="col-md-auto" id="bio" style="margin: 3%;">                        
+                        <h2 style="font-weight: bold; padding-bottom: 5px">{{keys | title}} </h2>                        
                         {% for movie in filmography[keys] %} 
-                        <h5>{{ movie['title'] }} </h5>
+                        <h4 style="font-weight: bold;">{{ movie['title'] }} </h4>
                         <p> {{ movie['overview'] }} </p>
-                        <p> {{ movie['release_date'] }} </p>
-                        <img id="posters" src="{{ movie['poster_path'] }}" alt="{{ movie['overview'] }}" class="responsive">
-                        
+                        <p> Release date:  {{ movie['release_date'] }} </p>
+                        <div class="col" id="bio" style="margin: 3%;"><img id="mini" src="{{ movie['poster_path'] }}" alt="{{ movie['overview'] }}" class="responsive">
+                        </div>
                         {% endfor %}
                     </div>
                 </div>
