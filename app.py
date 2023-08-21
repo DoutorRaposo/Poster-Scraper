@@ -117,6 +117,7 @@ def artist():
         return redirect(url_for("index"))
     roles = list(filmography.keys())
     roles.sort()
+    print(details)
     return render_template(
         "artist.html", roles=roles, filmography=filmography, details=details
     )
