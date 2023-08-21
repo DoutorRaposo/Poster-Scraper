@@ -55,7 +55,7 @@ movie page for {{ details['title'] }}
                             <h6> Click on the name see the poster options, <a
                                 href="https://www.themoviedb.org/person/{{ person['id'] | string }}"
                                 style="font-weight: bold" target="_blank">
-                                here</a> for the TMDB page or <a style="font-weight: bold">here</a> for the Poster Scraper's artist page.</h6>
+                                here</a> for the TMDB page or <a href="/artist?p={{ person['id'] }}" style="font-weight: bold">here</a> for the Poster Scraper's artist page.</h6>
                         <div class="col" id="bio" style="margin: 3%;">
                             {% if person['profile_path'] != None %}
                             <img style="padding-left: 0px;" id="search_img_opt"
