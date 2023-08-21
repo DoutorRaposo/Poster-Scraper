@@ -48,7 +48,7 @@ movie page for {{ details['title'] }}
                 {% for person in type %}
                 <div class="box">
                     <div class="col-md-auto" id="bio" style="margin: 3%;">
-                        <h2 style="font-weight: bold; padding-bottom: 5px">{{keys | title}} </h2>
+                        <h2 style="font-weight: bold; padding-bottom: 5px">{{type['known_for_department'] | title}} </h2>
                         {% for movie in filmography[keys] %}
                         <h4 style="font-weight: bold;"><a href="/movie?m={{ movie['id'] }}">{{ movie['title'] }}</a>
                         </h4>
