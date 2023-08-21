@@ -1,5 +1,6 @@
 from keys.API_Keys import api_token
 import requests
+from collections import OrderedDict
 
 headers = {"accept": "application/json", "Authorization": "Bearer " + api_token}
 
@@ -39,6 +40,7 @@ def get_filmography(filmography_json):
             except KeyError:
                 continue
     filmography["cast"] = filmography_json["cast"]
+    ordered_filmography = {k : filmography[k] for k in key_order}
     return filmography
 
 
