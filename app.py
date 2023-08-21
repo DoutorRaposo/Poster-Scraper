@@ -1,4 +1,10 @@
-from helpers import query_artists, get_filmography, get_details, filter_filmography
+from helpers import (
+    query_artists,
+    get_filmography,
+    get_details,
+    filter_filmography,
+    get_movie_details,
+)
 from flask import Flask, flash, redirect, render_template, url_for, request
 import secrets
 
@@ -121,3 +127,11 @@ def artist():
     return render_template(
         "artist.html", roles=roles, filmography=filtered_filmography, details=details
     )
+
+
+@app.route("/movie")
+def movie():
+    id = request.args.get("m")
+    movie_details = get_movie_details(id)
+    print(movie_details)
+    return redirect(url_for("index"))

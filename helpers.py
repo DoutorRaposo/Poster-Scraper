@@ -42,7 +42,7 @@ def get_filmography(filmography_json):
     filmography["cast"] = filmography_json["cast"]
     list_roles = list(filmography.keys())
     ordered_list = sorted(list_roles, key=str.casefold)
-    ordered_filmography = {k : filmography[k] for k in ordered_list}
+    ordered_filmography = {k: filmography[k] for k in ordered_list}
     return ordered_filmography
 
 
@@ -67,3 +67,11 @@ def filter_filmography(filmography, roles_list):
                     + filtered_filmography[key][index]["poster_path"]
                 )
     return filtered_filmography
+
+
+def get_movie_details(id):
+    details_movie_url = (
+        "https://api.themoviedb.org/3/movie/" + id + "?append_to_response=credits"
+    )
+    response = requests.get(details_movie_url, headers=headers)
+    return response.json()
