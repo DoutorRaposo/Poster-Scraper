@@ -20,7 +20,9 @@ def search():
     try:
         search_results = query_artists(artist)
     except AttributeError:
-        flash("Something went wrong with your request: AttributeError (parameter error). Redirecting to main page:")
+        flash(
+            "Something went wrong with your request: AttributeError (parameter error). Redirecting to main page:"
+        )
         return redirect(url_for("index"))
     if search_results["total_results"] == 1:
         id = search_results["results"][0]["id"]
@@ -39,12 +41,16 @@ def options():
     try:
         details = get_details(id)
     except TypeError:
-        flash("Something went wrong with your request: TypeError (ID error). Redirecting to main page:")
+        flash(
+            "Something went wrong with your request: TypeError (ID error). Redirecting to main page:"
+        )
         return redirect(url_for("index"))
     try:
         filmography = get_filmography(details["movie_credits"])
     except KeyError:
-        flash("Something went wrong with your request: KeyError (parameter error). Redirecting to main page:")
+        flash(
+            "Something went wrong with your request: KeyError (parameter error). Redirecting to main page:"
+        )
         return redirect(url_for("index"))
     roles = list(filmography.keys())
     roles.sort()
@@ -64,19 +70,27 @@ def posters():
     try:
         details = get_details(id)
     except TypeError:
-        flash("Something went wrong with your request: TypeError (ID error). Redirecting to main page:")
+        flash(
+            "Something went wrong with your request: TypeError (ID error). Redirecting to main page:"
+        )
         return redirect(url_for("index"))
     try:
         filmography = get_filmography(details["movie_credits"])
     except KeyError:
-        flash("Something went wrong with your request: KeyError (parameter error). Redirecting to main page:")
+        flash(
+            "Something went wrong with your request: KeyError (parameter error). Redirecting to main page:"
+        )
         return redirect(url_for("index"))
     filtered_filmography = filter_filmography(filmography, roles_list)
     for role in roles_list:
         if role.lower() not in list(filtered_filmography):
-            flash("Something went wrong with your request: KeyError (parameter error: role inputed not originally listed). Redirecting to main page:")
+            flash(
+                "Something went wrong with your request: KeyError (parameter error: role inputed not originally listed). Redirecting to main page:"
+            )
             return redirect(url_for("index"))
-    return render_template("posters.html", filmography=filtered_filmography, details=details)
+    return render_template(
+        "posters.html", filmography=filtered_filmography, details=details
+    )
 
 
 @app.errorhandler(404)
@@ -84,8 +98,16 @@ def page_not_found(error):
     flash("Page not found: 404. Redirecting to main page:")
     return redirect(url_for("index"))
 
+
 @app.route("/artist")
 def artist():
     id = request.args.get("p")
-    print(id)
+    try:
+        details = get_details(id)
+    except TypeError:
+        flash(
+            "Something went wrong with your request: TypeError (ID error). Redirecting to main page:"
+        )
+        return redirect(url_for("index"))
+    print(details)
     return redirect(url_for("index"))
