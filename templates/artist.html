@@ -32,17 +32,24 @@ artist page for {{ details['name'] }}
                             <p>{{ details['biography'] }}</p>
                             </p>
                             {% if details['birthday'] != None %}<p>Birthday: {{ details['birthday'] }}</p>{% endif %}
-                            {% if details['known_for_department'] != None %}<p>Known for: {{ details['known_for_department'] }}</p>{% endif %}
-                            {% if details['place_of_birth'] != None %} <p>Place of Birth: {{ details['place_of_birth'] }}</p>{% endif %}
+                            {% if details['known_for_department'] != None %}<p>Known for: {{
+                                details['known_for_department'] }}</p>{% endif %}
+                            {% if details['place_of_birth'] != None %} <p>Place of Birth: {{ details['place_of_birth']
+                                }}</p>{% endif %}
                             {% if details['deathday'] != None %} <p>Deathday: {{ details['deathday'] }}</p> {% endif %}
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="col-md-4" id="bio">
-                            
-                        </div>
+
+                </div>
+            </div>
+            <div class="row">
+                {% for keys in filmography %}
+                <div class="box">
+                    <div class="col-md-auto" id="bio">
+                        {{keys}}
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
         {% endblock %}
