@@ -20,7 +20,7 @@ posters for {{ details['name'] }}
         <div class="carousel-item {% if ns.found == true %}active{% endif %}">
             <img id="posters" src="{{ movie['poster_path'] }}" alt="{{ movie['overview'] }}" class="responsive">
             <div class="carousel-caption">
-                <h5><a href="https://www.themoviedb.org/movie/{{ movie['id'] }}" style="font-weight: bold;" target="_blank">{{ movie['title'] }}</a></h5>
+                <h5><a href="/movie?m={{ movie['id'] }}" style="font-weight: bold;" target="_blank; ">{{ movie['title'] }}</a></h5>
                 <p>{{ movie['overview'] }}</p>
                 <p style="font-weight: bold; font-size: smaller;"> Release date: {{movie['release_date'] }}. <br> <a
                         href="/artist?p={{ details['id'] }}">{{ details['name'] }}
