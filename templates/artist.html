@@ -20,9 +20,10 @@ artist page for {{ details['name'] }}
                 <div class="col-md-4" id="bio">
                     <div class="box">
                         <h2>
-                            <a href="https://www.themoviedb.org/person/{{ details['id'] | string }}" style="font-weight: bold; text-align: center;">
+                            <a href="https://www.themoviedb.org/person/{{ details['id'] | string }}" style="font-weight: bold">
                                 {{ details['name'] }}</a>
                         </h2>
+                        <h6> (click to see the poster options)</h6>
                         <p style="font-size: smaller;">
                             {{ details['biography'] }}
 
