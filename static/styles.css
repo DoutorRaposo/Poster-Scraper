@@ -420,6 +420,14 @@ a:visited {
     padding: 10px;
     margin: 10px;
 }
-a {
+.carousel-caption {
     z-index: 50;
+}
+
+.carousel-control-next-icon {
+    z-index: -1;
+}
+
+.carousel-control-next-prev {
+    z-index: -1;
 }
