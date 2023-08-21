@@ -41,11 +41,9 @@ def get_filmography(filmography_json):
                 continue
     filmography["cast"] = filmography_json["cast"]
     list_roles = list(filmography.keys())
-    list2 = list_roles.sort()
-    print(list2)
-    ordered_filmography = {k : filmography[k] for k in list_roles}
-    print(ordered_filmography.keys())
-    return filmography
+    ordered_list = sorted(list_roles, key=str.casefold)
+    ordered_filmography = {k : filmography[k] for k in ordered_list}
+    return ordered_filmography
 
 
 # This function filters the filmography for the selected jobs and also changes the links of the posters so movies without posters can have a default image.
