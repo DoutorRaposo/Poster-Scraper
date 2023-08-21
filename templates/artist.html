@@ -47,8 +47,13 @@ artist page for {{ details['name'] }}
                 <div class="box">
                     <div class="col-md-auto" id="bio" style="margin: 3%;">
                         {% if keys == "cast" %}{{keys | title}}{% else %} {{keys}}{% endif %}
-
-                        {% for movie in filmography[keys] %} {{ movie['overview'] }} {% endfor %}
+                        
+                        {% for movie in filmography[keys] %} 
+                        
+                        <p>{{ movie['overview'] }} </p>
+                        
+                        
+                        {% endfor %}
                     </div>
                 </div>
                 {% endfor %}
