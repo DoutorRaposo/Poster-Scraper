@@ -18,14 +18,13 @@ options for {{ details['name'] }}
                         src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/{{ details['profile_path'] }}">
                     {% endif %}
                     <h2>
-                        <a href="/artist?p={{ details['id'] }}"
-                            style="font-weight: bold;">
+                        <a href="/artist?p={{ details['id'] }}" style="font-weight: bold;">
                             {{ details['name'] }}</a>
                     </h2>
-                    <h6 class="box" style="font-size: 90%;"> Click on the name see the Poster Scraper's artist page or <a
-                        href="https://www.themoviedb.org/person/{{ details['id'] | string }}"
-                        style="font-weight: bold" target="_blank">
-                        here</a> for the TMDB page.</h6>
+                    <h6 class="box" style="font-size: 90%;"> Click on the name see the Poster Scraper's artist page or
+                        <a href="https://www.themoviedb.org/person/{{ details['id'] | string }}"
+                            style="font-weight: bold" target="_blank">
+                            here</a> for the TMDB page.</h6>
                 </div>
                 <div class="col" id="details">
                     <div class="box">

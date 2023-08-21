@@ -50,12 +50,15 @@ movie page for {{ details['title'] }}
                     <div class="col-md-auto" id="bio" style="margin: 3%;">
                         <h1 style="font-weight: bold;">{{type | title}}</h1>
                         {% for person in details['credits'][type] %}
-                        <h5 style="font-weight: bold; padding-bottom: 5px">Credited as "{{ person['character'] | title}}{{ person['job'] }}":
-                            <a href="/options?id={{ person['id'] }}">{{ person['name'] }} </a></h5>
-                            <h6> Click on the name see the poster options, <a
+                        <h5 style="font-weight: bold; padding-bottom: 5px">Credited as "{{ person['character'] |
+                            title}}{{ person['job'] }}":
+                            <a href="/options?id={{ person['id'] }}">{{ person['name'] }} </a>
+                        </h5>
+                        <h6> Click on the name see the poster options, <a
                                 href="https://www.themoviedb.org/person/{{ person['id'] | string }}"
                                 style="font-weight: bold" target="_blank">
-                                here</a> for the TMDB page or <a href="/artist?p={{ person['id'] }}" style="font-weight: bold">here</a> for the Poster Scraper's artist page.</h6>
+                                here</a> for the TMDB page or <a href="/artist?p={{ person['id'] }}"
+                                style="font-weight: bold">here</a> for the Poster Scraper's artist page.</h6>
                         <div class="col" id="bio" style="margin: 3%;">
                             {% if person['profile_path'] != None %}
                             <img style="padding-left: 0px;" id="search_img_opt"

@@ -133,7 +133,7 @@ def artist():
 def movie():
     id = request.args.get("m")
     movie_details = get_movie_details(id)
-    for type in movie_details['credits']:
-        print(movie_details['credits'][type])
+    for type in movie_details["credits"]:
+        print(movie_details["credits"][type])
 
     return render_template("movie.html", details=movie_details)
