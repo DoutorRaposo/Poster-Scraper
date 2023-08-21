@@ -420,3 +420,6 @@ a:visited {
     padding: 10px;
     margin: 10px;
 }
+a {
+    z-index: 50;
+}
