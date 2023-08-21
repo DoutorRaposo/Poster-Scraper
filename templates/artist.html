@@ -30,7 +30,12 @@ artist page for {{ details['name'] }}
                                     here</a> for the TMDB page.</h6>
                             <p style="font-size: smaller;">
                                 <h5 style="font-weight: bold;">Biography:</h5>
-                                {{ details['biography'] }}
+                                <p>{{ details['biography'] }}</p>
+
+                                <p>Birthday: {{ details['birthday']}}</p>
+                                <p>Known for: {{ details['known_for_department'] }}</p>
+                                <p>Place of Birth: {{ details['place_of_birth'] }}</p>
+
 
                             </p>
                         </div>
