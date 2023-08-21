@@ -15,23 +15,23 @@ movie page for {{ details['title'] }}
                         src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg">
                     {% else %}
                     <img id="search_img_opt"
-                        src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/{{ details['profile_path'] }}">
+                        src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ details['poster_path'] }}">
                     {% endif %}
                     <div class="col-md-4" id="bio" style="width: auto;">
                         <div class="box">
                             <h2>
                                 <a href="/options?id={{ details['id'] }}" style="font-weight: bold">
-                                    {{ details['name'] }}</a>
+                                    {{ details['title'] }}</a>
                             </h2>
-                            <h6> Click on the name see the poster options or <a
-                                    href="https://www.themoviedb.org/person/{{ details['id'] | string }}"
+                            <h6> Click on the title see the poster options or <a
+                                    href="https://www.themoviedb.org/movie/{{ details['id'] | string }}"
                                     style="font-weight: bold" target="_blank">
                                     here</a> for the TMDB page.</h6>
                             <p style="font-size: smaller;">
-                            <h5 style="font-weight: bold;">Biography:</h5>
-                            <p>{{ details['biography'] }}</p>
+                            <h5 style="font-weight: bold;">Overview:</h5>
+                            <p>{{ details['overview'] }}</p>
                             </p>
-                            {% if details['birthday'] != None %}<p>Birthday: {{ details['birthday'] }}</p>{% endif %}
+                            {% if details['release_date'] != None %}<p>Release date: {{ details['release_date'] }}</p>{% endif %}
                             {% if details['known_for_department'] != None %}<p>Known for: {{
                                 details['known_for_department'] }}</p>{% endif %}
                             {% if details['place_of_birth'] != None %} <p>Place of Birth: {{ details['place_of_birth']
