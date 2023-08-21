@@ -418,7 +418,11 @@ a:visited {
     padding: 10px;
     margin: 10px;
 }
-
+@media (max-width: 950px) {
+    .col-md-auto {
+        margin: 0px;
+    }
+}
 #options {
     background: rgba(0, 0, 0, 0.60);
     border-radius: 8px;
