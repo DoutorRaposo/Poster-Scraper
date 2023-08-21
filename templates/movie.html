@@ -42,22 +42,25 @@ movie page for {{ details['title'] }}
 
                 </div>
             </div>
+            {% for type in details['credits'] %}
             <div class="row">
-                {% for type in details['credits'] %}
-                {% for person in details['credits'][type] %}
+
+
                 <div class="box">
                     <div class="col-md-auto" id="bio" style="margin: 3%;">
-                        <h2 style="font-weight: bold; padding-bottom: 5px">Credited as {{ person['character'] | title}}:
-                            {{ person['name'] }} </h2>
-                        <h4 style="font-weight: bold;"><a href=""></a>
-                        </h4>
+                        <h1>{{type}}</h1>
+                        {% for person in details['credits'][type] %}
+                        <h5 style="font-weight: bold; padding-bottom: 5px">Credited as "{{ person['character'] | title}}":
+                            {{ person['name'] }} </h5>
                         <div class="col" id="bio" style="margin: 3%;">
                             <img id="mini" src="" alt=""
                                 class="responsive">
                         </div>
+                        {% endfor %}
                     </div>
+
                 </div>
-                {% endfor %}
+
                 {% endfor %}
             </div>
         </div>
