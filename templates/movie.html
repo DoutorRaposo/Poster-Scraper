@@ -34,7 +34,7 @@ movie page for {{ details['title'] }}
                             {% if details['tagline'] != "" %}<p>Tagline: {{
                                 details['tagline'] }}</p>{% endif %}
                             <p>Genre(s): {% for genre in details['genres'] %}
-                                {{ genre['name'] }}
+                                {{ genre['name'] }}{% if not loop.last %},{% else %}.{% endif %}
                                 {% endfor%}
                             </p>
                         </div>
