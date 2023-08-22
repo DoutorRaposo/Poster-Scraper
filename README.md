@@ -3,7 +3,7 @@
 #### Description:
 My final project is Poster Scraper: a website that shows all the posters for the movies of the artist of your choice: maybe a director, actor, producer or even more than one of those combined. 
 
-You can search for an artist and if there is more than one result you can checkout a few titles that they are known for, a picture (if available, if not there's a placeholder) and the job that they are most known for. If there's only one result, you go directly to a page with the full bio, a pic and also all the types of jobs that they have been credited for (be it acting, directing, producing, etc.). You then select which ones you want to see and by pressing the button a gallery with all the posters will appear with a caption with title, synopsis about the movies and release date. If there's no poster for a title, instead of showing a placeholder, the title will not be exhibited at all.
+You can search for an artist and if there is more than one result you can checkout a few titles that they are known for, a picture (if available, if not there's a placeholder) and the job that they are most known for. If there's only one result, you go directly to a page with the artist's pic and also all the types of jobs that they have been credited for (be it acting, directing, producing, etc.). You then select which ones you want to see and by pressing the button a gallery with all the posters will appear with a caption with title, synopsis about the movies and release date. If there's no poster for a title, instead of showing a placeholder, the title will not be exhibited at all.
 
 In every page you can checkout the artist's profiles and mentioned titles, if you want, inside Poster Scraper itself or in the website supplier of the database: TMDB.
 
