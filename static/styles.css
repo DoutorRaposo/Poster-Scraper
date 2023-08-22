@@ -195,7 +195,7 @@ body {
     }
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 1000px) {
     #search_img_movie {
         padding: 25px;
     }
