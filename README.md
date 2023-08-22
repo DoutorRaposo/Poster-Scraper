@@ -1,5 +1,5 @@
 # Poster Scraper
-#### Video Demo:  <URL HERE>
+#### Video Demo:  https://youtu.be/QZKG3W9wHZ8
 #### Description:
 My final project is Poster Scraper: a website that shows all the posters for the movies of the artist of your choice: maybe a director, actor, producer or even more than one of those combined. 
 
