@@ -14,6 +14,7 @@ In every page you can checkout the artist's profiles and mentioned titles, if yo
 - You can query directly in the URL if you know the parameters. Everything is through "GET"
 
 
+
 ### Structure of the files:
 
 This is a web application that uses Flask for the backend.
