@@ -191,6 +191,12 @@ body {
 @media (min-width: 1000px) {
     #search_img_movie {
         height: 800px;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1000px) {
+    #search_img_movie {
         padding: 25px;
     }
 }
